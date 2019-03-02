@@ -4,6 +4,9 @@ def URLify(string):
 	Args:
 		string: Input string
 
+	Returns
+		string: After replacing spaces with "%20"
+
 	Assumption:
 		Empty string shoud be returned as it is.
 

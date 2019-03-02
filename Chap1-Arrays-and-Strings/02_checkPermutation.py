@@ -5,6 +5,9 @@ def checkPermutation(str1, str2):
 		str1: String
 		str2: String
 
+	Returns:
+		boolean: True or False
+
 	Assumption:
 		Empty strings are permutations of each other.
 
@@ -38,6 +41,10 @@ def getSignature(string):
 	Args:
 		string: String
 
+	Returns:
+		Dictionary with keys as characters in the string, and values as their
+		counts.
+
 	Assumption:
 		Signature of empty string is an empty dictionary.
 
@@ -65,7 +72,7 @@ for str1, str2 in strings:
 	print("String2:", str2)
 	print(checkPermutation(str1, str2))
 	print("")
-	
+
 
 
 

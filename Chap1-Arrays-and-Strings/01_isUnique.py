@@ -4,6 +4,9 @@ def isUnique(string):
 	Args:
 		string: Input 
 
+	Returns:
+		boolean: True or False
+
 	Assumptions:
 		Empty string is unique string.
 
@@ -22,6 +25,9 @@ def isUnique2(string):
 	
 	Args:
 		string: Input string
+
+	Returns:
+		boolean: True or False
 
 	Assumptions:
 		Empty string is unique string.
