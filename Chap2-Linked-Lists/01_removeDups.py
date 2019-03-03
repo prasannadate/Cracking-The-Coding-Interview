@@ -1,6 +1,3 @@
-from linked_list import LinkedList
-
-
 def removeDups(LL):
 	""" Removes all duplicate elements from linked list
 
@@ -74,7 +71,11 @@ def removeDupsWithoutBuffer(LL):
 	return LL
 
 
+
+
 # TESTING
+from linked_list import LinkedList
+
 LL = LinkedList()
 LL.add(1)
 LL.add(2)
