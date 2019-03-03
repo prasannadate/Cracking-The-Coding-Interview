@@ -1,4 +1,4 @@
-def returnKthFromLast(LL, K):
+def returnKthToLast(LL, K):
 	""" Returns Kth from the last element
 
 	Args:
@@ -46,11 +46,11 @@ LL.add(4)
 LL.add(5)
 
 print(LL)
-print(returnKthFromLast(LL, 0))
-print(returnKthFromLast(LL, 1))
-print(returnKthFromLast(LL, 2))
-print(returnKthFromLast(LL, 3))
-print(returnKthFromLast(LL, 4))
-print(returnKthFromLast(LL, 5))
-print(returnKthFromLast(LL, 6))
-print(returnKthFromLast(LL, 7))
+print(returnKthToLast(LL, 0))
+print(returnKthToLast(LL, 1))
+print(returnKthToLast(LL, 2))
+print(returnKthToLast(LL, 3))
+print(returnKthToLast(LL, 4))
+print(returnKthToLast(LL, 5))
+print(returnKthToLast(LL, 6))
+print(returnKthToLast(LL, 7))
