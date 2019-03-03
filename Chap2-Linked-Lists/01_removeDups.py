@@ -2,6 +2,23 @@ from linked_list import LinkedList
 
 
 def removeDups(LL):
+	""" Removes all duplicate elements from linked list
+
+	Args:
+		LL: Linked List object
+
+	Returns:
+		Linked list object with duplicate elements removed
+
+	Assumptions:
+		Linked list object contains pointer to head of the linked list
+
+	Complexity Analysis:
+		Time Complexity: O(N)
+		Space Complexity: O(N)
+
+	"""
+
 	vals = set()
 	curr = LL.head
 	prev = None
@@ -19,6 +36,24 @@ def removeDups(LL):
 
 
 def removeDupsWithoutBuffer(LL):
+	removeDups(LL):
+	""" Removes all duplicate elements from linked list
+
+	Args:
+		LL: Linked List object
+
+	Returns:
+		Linked list object with duplicate elements removed
+
+	Assumptions:
+		Linked list object contains pointer to head of the linked list
+
+	Complexity Analysis:
+		Time Complexity: O(N^2)
+		Space Complexity: O(1)
+
+	"""
+
 	current = LL.head
 	runner = None
 	previous = None
