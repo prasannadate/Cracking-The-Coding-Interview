@@ -142,6 +142,13 @@ class LinkedList:
 		return vals
 
 
+	def reverse(self):
+		curr = self.head
+		while curr:
+			curr.next, curr.prev = curr.prev, curr.next
+			curr = curr.prev
+		self.head, self.tail = self.tail, self.head
+
 
 
 
