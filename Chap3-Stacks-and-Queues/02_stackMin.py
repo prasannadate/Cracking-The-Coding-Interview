@@ -165,6 +165,11 @@ print(S.pop())
 print(S.pop())
 print(S)
 print(S.getMin())
+S.push(1)
+S.push(1)
+S.push(4)
+print(S)
+print(S.getMin())
 
 
 
