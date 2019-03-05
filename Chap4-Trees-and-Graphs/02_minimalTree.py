@@ -26,7 +26,7 @@ class BinaryTreeNode:
 
 		"""
 
-		return str(self.bfs())
+		return str(self.bfs()[:-1])
 
 
 	def bfs(self):
@@ -44,17 +44,17 @@ class BinaryTreeNode:
 		Q = [[self]]
 		bfsTree = []
 		while Q:
-			currq = Q.pop()
+			currq = Q.pop(0)
 			nextq = []
 			level = []
 			while currq:
-				q = currq.pop()
+				q = currq.pop(0)
 				if q is None:
 					level.append(None)
-					break
-				level.append(q.val)
-				nextq.append(q.left)
-				nextq.append(q.right)
+				else:
+					level.append(q.val)
+					nextq.append(q.left)
+					nextq.append(q.right)
 			if nextq:
 				Q.append(nextq)
 			if level:
@@ -83,7 +83,7 @@ def minimalTree(vals):
 		return None
 
 	mid = len(vals) // 2
-	root = TreeNode(vals[mid])
+	root = BinaryTreeNode(vals[mid])
 	root.left = minimalTree(vals[:mid])
 	root.right = minimalTree(vals[mid+1:])
 
@@ -94,7 +94,7 @@ def minimalTree(vals):
 
 
 # TESTING
-vals = [1,2,3,4,5,6]
+vals = [1,2,3,4,5,6,7,8]
 print(minimalTree(vals))
 
 
