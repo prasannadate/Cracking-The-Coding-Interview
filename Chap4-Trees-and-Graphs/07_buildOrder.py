@@ -143,7 +143,7 @@ def buildOrder(projects, dependencies):
 			is dependent on the first project in the tuple
 
 	Complexity Analysis:
-		Time Complexity: O(V + E), V = number of projects, E = number of dependencies
+		Time Complexity: O(V * E), V = number of projects, E = number of dependencies
 		Space Complexity: O(V + E)
 
 	"""
@@ -174,8 +174,16 @@ def buildOrder(projects, dependencies):
 		while Q:
 			node = Q.pop(0)
 			if node not in visited:
-				visited.add(node)
-				order.append(node.val)
+				addIt = True
+
+				for edge in node.inEdges:
+					if edge.fromNode not in visited:
+						addIt = False
+						break
+
+				if addIt:
+					visited.add(node)
+					order.append(node.val)
 
 				for edge in node.outEdges:
 					if edge.toNode not in visited:
@@ -199,7 +207,8 @@ projects = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', \
 			'n', 'o', 'p']
 dependencies = [('a', 'd'), ('f', 'b'), ('b', 'd'), ('f', 'a'), ('d', 'c'), \
 				('g', 'h'), ('h', 'i'), ('h', 'j'), ('h', 'k'), ('i', 'l'), \
-				('j', 'l'), ('k', 'm'), ('l', 'n'), ('m', 'n'), ('o', 'p')]
+				('j', 'l'), ('k', 'm'), ('l', 'n'), ('m', 'n'), ('o', 'p'), \
+				('p', 'c')]
 order = buildOrder(projects, dependencies)
 print(order)
 
