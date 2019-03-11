@@ -3,7 +3,7 @@ def nextNumber(A):
 			that have the same number of 1 bits in their binary representation
 
 	Args:
-		A: Positive integer
+		A: 32 bit ositive integer
 
 	Returns:
 		A pair containing the next smallest and the next largest number that have
