@@ -106,16 +106,16 @@ def permutation(A):
 
 
 # TESTING
-# A = [5,4,3,2,1]
-# for i in range(120):
-# 	A = permute(A)
-# 	print(A)
+A = [5,4,3,2,1]
+for i in range(120):
+	A = permute(A)
+	print(A)
 
 
 
-A = ['a', 'b', 'c']
-print(permutation(A))
-
+A = ['a', 'b', 'c', 'd', 'e']
+for a in permutation(A):
+	print(a)
 
 
 
