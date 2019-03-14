@@ -65,11 +65,56 @@ def indexOfSmallestElementGreaterThan(val, B):
 
 
 
+def permutation(A):
+	""" Given a list of elements, returns all possible permutations that can be 
+			formed from those numbers. 
+
+	Args:
+		A: List of elements
+
+	Returns:
+		A list of all possible permutations
+
+	Assumptions:
+		A does not contain duplicate elements
+
+	Complexity Analysis:
+		Time Complexity: O(N!), N = length of A
+		Space Complexity: O(N!)
+
+	"""
+
+	if not A:
+		return [[]]
+
+	if len(A) == 1:
+		return [A]
+
+	perms = permutation(A[1:])
+	ans = []
+
+	for i in range(len(perms[:])):
+		for j in range(len(perms[i])):
+			ans.append(perms[i][0:j] + [A[0]] + perms[i][j:])
+		ans.append(perms[i] + [A[0]])
+
+	return ans
+
+
+
+
+
+
 # TESTING
-A = [5,4,3,2,1]
-for i in range(120):
-	A = permute(A)
-	print(A)
+# A = [5,4,3,2,1]
+# for i in range(120):
+# 	A = permute(A)
+# 	print(A)
+
+
+
+A = ['a', 'b', 'c']
+print(permutation(A))
 
 
 
